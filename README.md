@@ -1,27 +1,46 @@
-# EdicionEvento1
+### Mejora de la Comprensión del Código
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Para mejorar la comprensión del código, es recomendable utilizar nombres descriptivos en lugar de nombres genéricos. A continuación, se muestra un ejemplo de cómo renombrar elementos para que sean más claros y descriptivos.
 
-## Development server
+#### Código Incorrecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El siguiente código no sigue buenas prácticas de codificación legible:
 
-## Code scaffolding
+html
+<!-- Este código está incorrecto y no sigue buenas prácticas de codificación legible -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<header class="header">
+  <img src="assets/images/logo.png" class="logo" alt="Logo de la universidad">
+  <div class="header-text">
+    <div class="header-upper">{{ u }}</div> <!-- Uso de nombre de variable poco claro -->
+    <div class="header-lower">
+      <div class="title">{{ t1 }}</div> <!-- Nombre de variable poco descriptivo -->
+      <div class="title">{{ t2 }}</div> <!-- Nombre de variable poco descriptivo -->
+      <div class="description">{{ desc }}</div> <!-- Uso de comentario de descripción innecesariamente largo -->
+    </div>
+  </div>
+</header>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Código Mejorado
 
-## Running unit tests
+Siguiendo las buenas prácticas de codificación legible, el código debería verse así:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+html
+<header class="header-container">
+  <img src="assets/images/Escuela.png" class="img-opaca" alt="Escuela Fondo">
+  <div class="header-upper">{{ universityName }}</div>
+  <div class="header-text">
+    <div class="header-lower">
+      <div class="header-title">{{ title1 }}</div>
+      <div class="header-title">{{ title2 }}</div>
+      <div class="header-description">{{ description }}</div>
+    </div>
+  </div>
+</header>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+En este código mejorado:
+- Se cambió header a header-container para ser más descriptivo.
+- logo se renombró a img-opaca, y el texto alternativo fue actualizado.
+- Se cambiaron las variables u, t1, t2, y desc a nombres más descriptivos como universityName, title1, title2, y description, respectivamente.
