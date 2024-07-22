@@ -6,7 +6,7 @@ Para mejorar la comprensión del código, es recomendable utilizar nombres descr
 
 El siguiente código no sigue buenas prácticas de codificación legible:
 
-html
+```html
 <!-- Este código está incorrecto y no sigue buenas prácticas de codificación legible -->
 
 <header class="header">
@@ -20,13 +20,13 @@ html
     </div>
   </div>
 </header>
-
+```
 
 #### Código Mejorado
 
 Siguiendo las buenas prácticas de codificación legible, el código debería verse así:
 
-html
+```html
 <header class="header-container">
   <img src="assets/images/Escuela.png" class="img-opaca" alt="Escuela Fondo">
   <div class="header-upper">{{ universityName }}</div>
@@ -38,7 +38,7 @@ html
     </div>
   </div>
 </header>
-
+```
 
 En este código mejorado:
 - Se cambió header a header-container para ser más descriptivo.
